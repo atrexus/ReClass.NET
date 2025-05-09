@@ -106,6 +106,7 @@ namespace ReClassNET.Forms
 			SetBinding(showPluginInfoCheckBox, nameof(CheckBox.Checked), settings, nameof(Settings.ShowCommentPluginInfo));
 			SetBinding(runAsAdminCheckBox, nameof(CheckBox.Checked), settings, nameof(Settings.RunAsAdmin));
 			SetBinding(randomizeWindowTitleCheckBox, nameof(CheckBox.Checked), settings, nameof(Settings.RandomizeWindowTitle));
+			SetBinding(hideWindowIconsCheckBox, nameof(CheckBox.Checked), settings, nameof(Settings.HideWindowIcons));
 		}
 
 		private void SetColorBindings()

@@ -1,4 +1,4 @@
-﻿using System.Windows.Forms;
+using System.Windows.Forms;
 
 namespace ReClassNET.Forms
 {
@@ -6,7 +6,16 @@ namespace ReClassNET.Forms
 	{
 		public IconForm()
 		{
-			Icon = Properties.Resources.ReClassNet;
+			if (Program.Settings.HideWindowIcons)
+			{
+				ShowIcon = false;
+				Icon = null;
+			}
+			else
+			{
+				ShowIcon = true;
+				Icon = Properties.Resources.ReClassNet;
+			}
 		}
 	}
 }

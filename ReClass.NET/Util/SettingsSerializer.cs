@@ -36,6 +36,7 @@ namespace ReClassNET.Util
 					XElementSerializer.TryRead(general, nameof(settings.StayOnTop), e => settings.StayOnTop = XElementSerializer.ToBool(e));
 					XElementSerializer.TryRead(general, nameof(settings.RunAsAdmin), e => settings.RunAsAdmin = XElementSerializer.ToBool(e));
 					XElementSerializer.TryRead(general, nameof(settings.RandomizeWindowTitle), e => settings.RandomizeWindowTitle = XElementSerializer.ToBool(e));
+					XElementSerializer.TryRead(general, nameof(settings.HideWindowIcons), e => settings.HideWindowIcons = XElementSerializer.ToBool(e));
 				}
 				var display = root?.Element(XmlDisplayElement);
 				if (display != null)
@@ -107,7 +108,8 @@ namespace ReClassNET.Util
 						XElementSerializer.ToXml(nameof(settings.LastProcess), settings.LastProcess),
 						XElementSerializer.ToXml(nameof(settings.StayOnTop), settings.StayOnTop),
 						XElementSerializer.ToXml(nameof(settings.RunAsAdmin), settings.RunAsAdmin),
-						XElementSerializer.ToXml(nameof(settings.RandomizeWindowTitle), settings.RandomizeWindowTitle)
+						XElementSerializer.ToXml(nameof(settings.RandomizeWindowTitle), settings.RandomizeWindowTitle),
+						XElementSerializer.ToXml(nameof(settings.HideWindowIcons), settings.HideWindowIcons)
 					),
 					new XElement(
 						XmlDisplayElement,

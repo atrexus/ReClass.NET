@@ -45,6 +45,7 @@ namespace ReClassNET.Forms
             this.showIntegerCheckBox = new System.Windows.Forms.CheckBox();
             this.showFloatCheckBox = new System.Windows.Forms.CheckBox();
             this.displayGroupBox = new System.Windows.Forms.GroupBox();
+            this.hideWindowIconsCheckBox = new System.Windows.Forms.CheckBox();
             this.randomizeWindowTitleCheckBox = new System.Windows.Forms.CheckBox();
             this.runAsAdminCheckBox = new System.Windows.Forms.CheckBox();
             this.highlightChangedValuesCheckBox = new System.Windows.Forms.CheckBox();
@@ -83,6 +84,8 @@ namespace ReClassNET.Forms
             this.backgroundLabel = new System.Windows.Forms.Label();
             this.backgroundColorBox = new ReClassNET.Controls.ColorBox();
             this.typeDefinitionsSettingsTabPage = new System.Windows.Forms.TabPage();
+            this.utf32TextSettingsLabel = new System.Windows.Forms.Label();
+            this.utf32TextTypeTextBox = new System.Windows.Forms.TextBox();
             this.nuintSettingsLabel = new System.Windows.Forms.Label();
             this.nuintTypeTextBox = new System.Windows.Forms.TextBox();
             this.nintSettingsLabel = new System.Windows.Forms.Label();
@@ -129,8 +132,6 @@ namespace ReClassNET.Forms
             this.int8SettingsLabel = new System.Windows.Forms.Label();
             this.int8TypeTextBox = new System.Windows.Forms.TextBox();
             this.bannerBox = new ReClassNET.Controls.BannerBox();
-            this.utf32TextSettingsLabel = new System.Windows.Forms.Label();
-            this.utf32TextTypeTextBox = new System.Windows.Forms.TextBox();
             this.settingsTabControl.SuspendLayout();
             this.generalSettingsTabPage.SuspendLayout();
             this.fileAssociationGroupBox.SuspendLayout();
@@ -298,6 +299,7 @@ namespace ReClassNET.Forms
             // 
             // displayGroupBox
             // 
+            this.displayGroupBox.Controls.Add(this.hideWindowIconsCheckBox);
             this.displayGroupBox.Controls.Add(this.randomizeWindowTitleCheckBox);
             this.displayGroupBox.Controls.Add(this.runAsAdminCheckBox);
             this.displayGroupBox.Controls.Add(this.highlightChangedValuesCheckBox);
@@ -306,10 +308,20 @@ namespace ReClassNET.Forms
             this.displayGroupBox.Controls.Add(this.showNodeAddressCheckBox);
             this.displayGroupBox.Location = new System.Drawing.Point(283, 39);
             this.displayGroupBox.Name = "displayGroupBox";
-            this.displayGroupBox.Size = new System.Drawing.Size(265, 160);
+            this.displayGroupBox.Size = new System.Drawing.Size(265, 186);
             this.displayGroupBox.TabIndex = 2;
             this.displayGroupBox.TabStop = false;
             this.displayGroupBox.Text = "Display";
+            // 
+            // hideWindowIconsCheckBox
+            // 
+            this.hideWindowIconsCheckBox.AutoSize = true;
+            this.hideWindowIconsCheckBox.Location = new System.Drawing.Point(6, 157);
+            this.hideWindowIconsCheckBox.Name = "hideWindowIconsCheckBox";
+            this.hideWindowIconsCheckBox.Size = new System.Drawing.Size(115, 17);
+            this.hideWindowIconsCheckBox.TabIndex = 6;
+            this.hideWindowIconsCheckBox.Text = "Hide window icons";
+            this.hideWindowIconsCheckBox.UseVisualStyleBackColor = true;
             // 
             // randomizeWindowTitleCheckBox
             // 
@@ -724,6 +736,22 @@ namespace ReClassNET.Forms
             this.typeDefinitionsSettingsTabPage.Text = "Type Definitions";
             this.typeDefinitionsSettingsTabPage.UseVisualStyleBackColor = true;
             // 
+            // utf32TextSettingsLabel
+            // 
+            this.utf32TextSettingsLabel.AutoSize = true;
+            this.utf32TextSettingsLabel.Location = new System.Drawing.Point(254, 233);
+            this.utf32TextSettingsLabel.Name = "utf32TextSettingsLabel";
+            this.utf32TextSettingsLabel.Size = new System.Drawing.Size(43, 13);
+            this.utf32TextSettingsLabel.TabIndex = 52;
+            this.utf32TextSettingsLabel.Text = "UTF32:";
+            // 
+            // utf32TextTypeTextBox
+            // 
+            this.utf32TextTypeTextBox.Location = new System.Drawing.Point(346, 230);
+            this.utf32TextTypeTextBox.Name = "utf32TextTypeTextBox";
+            this.utf32TextTypeTextBox.Size = new System.Drawing.Size(120, 20);
+            this.utf32TextTypeTextBox.TabIndex = 51;
+            // 
             // nuintSettingsLabel
             // 
             this.nuintSettingsLabel.AutoSize = true;
@@ -1096,22 +1124,6 @@ namespace ReClassNET.Forms
             this.bannerBox.Text = "Configure the global settings.";
             this.bannerBox.Title = "Settings";
             // 
-            // utf32TextSettingsLabel
-            // 
-            this.utf32TextSettingsLabel.AutoSize = true;
-            this.utf32TextSettingsLabel.Location = new System.Drawing.Point(254, 233);
-            this.utf32TextSettingsLabel.Name = "utf32TextSettingsLabel";
-            this.utf32TextSettingsLabel.Size = new System.Drawing.Size(43, 13);
-            this.utf32TextSettingsLabel.TabIndex = 52;
-            this.utf32TextSettingsLabel.Text = "UTF32:";
-            // 
-            // utf32TextTypeTextBox
-            // 
-            this.utf32TextTypeTextBox.Location = new System.Drawing.Point(346, 230);
-            this.utf32TextTypeTextBox.Name = "utf32TextTypeTextBox";
-            this.utf32TextTypeTextBox.Size = new System.Drawing.Size(120, 20);
-            this.utf32TextTypeTextBox.TabIndex = 51;
-            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1247,5 +1259,6 @@ namespace ReClassNET.Forms
 		private System.Windows.Forms.TextBox nintTypeTextBox;
 		private System.Windows.Forms.Label utf32TextSettingsLabel;
 		private System.Windows.Forms.TextBox utf32TextTypeTextBox;
+		private System.Windows.Forms.CheckBox hideWindowIconsCheckBox;
 	}
 }

@@ -542,6 +542,9 @@
     <EmbeddedResource Include="Forms\EnumSelectionForm.resx">
       <DependentUpon>EnumSelectionForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IconForm.resx">
+      <DependentUpon>IconForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\NamedAddressesForm.resx">
       <DependentUpon>NamedAddressesForm.cs</DependentUpon>
     </EmbeddedResource>

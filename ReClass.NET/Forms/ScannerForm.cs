@@ -878,12 +878,7 @@ namespace ReClassNET.Forms
 		}
 	}
 
-	internal class InvalidInputException : Exception
+	internal class InvalidInputException(string input) : Exception($"'{input}' is not a valid input.")
 	{
-		public InvalidInputException(string input)
-			: base($"'{input}' is not a valid input.")
-		{
-
-		}
 	}
 }

@@ -1,4 +1,4 @@
-﻿using System.Drawing;
+using System.Drawing;
 using System.Text;
 using ReClassNET.Util;
 
@@ -15,6 +15,8 @@ namespace ReClassNET
 		public bool RunAsAdmin { get; set; } = false;
 
 		public bool RandomizeWindowTitle { get; set; } = false;
+
+		public bool HideWindowIcons { get; set; } = false;
 
 		// Node Drawing Settings
 
